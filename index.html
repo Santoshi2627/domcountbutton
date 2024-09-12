@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        
+        <button id="btn1">Increment</button><br><br>
+        <p>COUNTER:<span id="resultincre">0</span></p>
+        <button id="btn2">Decrement</button>
+        <p>COUNTER:<span id="resultdecre">0</span></p>
+    </form>
+    <script>
+        let button1=document.getElementById('btn1')
+        let count1=0;
+        button1.addEventListener('click',(evnt)=>{
+            evnt.preventDefault();
+            count1++
+            let p=document.getElementById('resultincre')
+            p.innerText=`${count1}`;
+
+        });
+        let count2=0;
+        let button2=document.getElementById('btn2')
+        button2.addEventListener('click',function(evnt){
+           evnt.preventDefault();
+            count2--;
+            let p=document.getElementById('resultdecre')
+            p.innerText=`${count2}`;
+        });
+    </script>
+</body>
+</html>
